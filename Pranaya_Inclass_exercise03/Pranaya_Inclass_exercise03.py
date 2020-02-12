@@ -29,11 +29,11 @@ all_short_desc = [sd.get_text() for sd in seven_day.select(".tombstone-container
 all_temps = [t.get_text() for t in seven_day.select(".tombstone-container .temp")]
 all_descs = [d["title"] for d in seven_day.select(".tombstone-container img")]
 
-a = pandas.DataFrame({
+ouput_csv = pandas.DataFrame({
     "period": all_period,
     "short_desc":all_short_desc,
     "temp":all_temps,
     "desc":all_descs
 })
-a.to_csv("Inclass_exercise3_output.csv")
+ouput_csv.to_csv("Inclass_exercise3_output.csv")
 
